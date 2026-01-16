@@ -18,7 +18,7 @@ app.use(cookieParser());
  
 
 app.use(cors({
-  origin: "https://mern-auth-yoo8.vercel.app",
+  origin: "https://mern-authentication-66zg.vercel.app",
   credentials: true
 }));
 //API Endpoints
