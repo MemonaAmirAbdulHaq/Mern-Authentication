@@ -17,10 +17,17 @@ app.use(express.json());
 app.use(cookieParser());
  
 
+const cors = require("cors");
+
 app.use(cors({
-  origin: "https://mern-authentication-66zg.vercel.app",
+  origin: [
+    "https://mern-authentication-66zg.vercel.app",
+    "https://mern-authentication-66zg-c6946achq-maidas-projects-455c8012.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
+
 //API Endpoints
 app.get('/',(req,res)=> res.send("API is Working."));
 app.use('/api/auth', authRouter)
