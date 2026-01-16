@@ -15,10 +15,10 @@ const port = process.env.PORT || 4000
 
 app.use(express.json());
 app.use(cookieParser());
-import cors from "cors";
+ 
 
 app.use(cors({
-  origin: "https://mern-auth-yroi.vercel.app",
+  origin: "https://mern-auth-yoo8.vercel.app",
   credentials: true
 }));
 //API Endpoints
