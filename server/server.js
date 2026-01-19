@@ -9,8 +9,12 @@ import userRouter from "./routes/userRoutes.js";
 const app = express();
 const port = process.env.PORT || 4000;
 
-await connectDB();
 
+const startServer = async () => {
+  await connectDB();
+};
+
+startServer();
 
 app.use(express.json());
 app.use(cookieParser());
@@ -29,6 +33,7 @@ app.use(
 app.get("/", (req, res) => res.send("API is Working."));
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+
 export default app;
 
  
