@@ -31,8 +31,8 @@ app.use(
 
 // API Endpoints
 app.get("/", (req, res) => res.send("API is Working."));
-app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes);
+app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
 
 export default app;
 
