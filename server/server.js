@@ -31,16 +31,10 @@ app.use(
 
 // API Endpoints
 app.get("/", (req, res) => res.send("API is Working."));
-app.use("/api/auth", authRouter);
-app.use("/api/user", userRouter);
+app.use("/api/auth/", authRouter);
+app.use("/api/user/", userRouter);
 
-app.post("/api/auth/login", (req, res) => {
-  res.json({ message: "Login successful" });
-});
-
-app.get("/api/auth/is-auth", (req, res) => {
-  res.json({ authenticated: true });
-});
+ 
 
 export default app;
 
