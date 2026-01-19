@@ -28,5 +28,6 @@ app.use(
 app.get("/", (req, res) => res.send("API is Working."));
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+export default app;
 
  
